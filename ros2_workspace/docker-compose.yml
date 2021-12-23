@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  ros2-dev:
+    build:
+      context: ./
+      dockerfile: ./docker/dev.dockerfile
+    volumes:
+      - .:/root/ros2_workspace
+    tty: true # use terminal, i.e. -t flag
+    stdin_open: true # allow terminal input, i.e. -i flag
